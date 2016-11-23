@@ -97,6 +97,7 @@ public class BambooCollectorTask extends CollectorTask<BambooCollector> {
                 addNewJobs(buildsByJob.keySet(), existingJobs, collector);
                 addNewBuilds(enabledJobs(collector, instanceUrl), buildsByJob);
                 log("Finished", start);
+				log("git explaination")
             } catch (RestClientException rce) {
                 activeServers.remove(instanceUrl); // since it was a rest exception, we will not delete this job  and wait for
                 // rest exceptions to clear up at a later run.
